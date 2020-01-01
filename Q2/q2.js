@@ -1,4 +1,3 @@
-// "1??0?101"
 const strToArr = function(inputStr, repChar) {
   const arr = [];
   for (let i = 0; i < inputStr.length; i++) {
@@ -85,26 +84,50 @@ const sol3 = function(inputStr, repChar = "?") {
       result = temp;
     } else {
       let combinedChar = charAti;
-      for (let m = i + 1; m < inputStr.length; m++) {
+      let m = i + 1;
+      while (m < inputStr.length) {
         loopRun++;
-        // console.log(`i:${i}, charAti: ${charAti}, m:${m}`);
-        i = m - 1; // bcz i++ will be executed
         if (inputStr[m] === repChar) {
           break;
         } else {
           combinedChar = combinedChar + inputStr[m];
+          m++;
         }
       }
-      // console.log(`combinedChar: ${combinedChar}, i: ${i}`);
-      // console.log(`result: ${result}`);
+      i = m - 1;
       for (let j = 0; j < result.length; j++) {
+        loopRun++;
         result[j] = result[j] + combinedChar;
       }
-      // console.log(`resultAfter: ${result}`);
-      // console.log("END");
     }
   }
   return { result, loopRun, N: inputStr.length };
 };
 
-exports.q2Sols = { 1: sol1, 2: sol2, 3: sol3 };
+const sol4 = function(inputStr, repChar = "?") {
+  const z = inputStr.split(repChar);
+  let loopRun = 0;
+  const result = z.reduce(
+    (prev, curr, idx) => {
+      if (idx < z.length - 1) {
+        const tmp = [];
+        for (let i = 0; i < prev.length; i++) {
+          tmp.push(prev[i] + curr + "0");
+          tmp.push(prev[i] + curr + "1");
+          loopRun++;
+        }
+        return tmp;
+      }
+      if (curr != "") {
+        loopRun += prev.length;
+        return prev.map(item => item + curr);
+      }
+      loopRun++;
+      return prev;
+    },
+    [""]
+  );
+  return { result, loopRun, N: inputStr.length };
+};
+
+exports.q2Sols = { 1: sol1, 2: sol2, 3: sol3, 4: sol4 };

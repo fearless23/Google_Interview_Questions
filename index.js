@@ -23,3 +23,9 @@ const runSol = function(quesNo = 1, solNo = 1, input) {
   );
   //   return { time: b - a, result };
 };
+
+
+const x = "1?1?1?1?01010?1???10??????1000000000000000"
+runSol(2,2,x)
+runSol(2,3,x)
+runSol(2,4,x)
