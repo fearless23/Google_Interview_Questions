@@ -27,7 +27,7 @@ const sol1 = function(arr) {
       }
     }
   }
-  return { triplets, loopRun, N };
+  return { result: triplets, loopRun, N };
 };
 
 exports.q1Sols = { 1: sol1 };
