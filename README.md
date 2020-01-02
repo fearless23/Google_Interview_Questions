@@ -14,6 +14,10 @@ BEGINNER:
 4. [Find largest word in dictionary by deleting some characters of given string](./Beginner/Q4/q4.md)
 5. [Find subarray with given sum | Set 1 (Nonnegative Numbers)](./Beginner/Q5/q5.md)
 6. [Find the longest substring with k unique characters in a given string](./Beginner/Q6/q6.md)
+7. [Find the two non-repeating elements in an array of repeating elements](./Beginner/Q7/q7.md)
+8. [Flood fill Algorithm – how to implement fill in paint?](./Beginner/Q8/q8.md)
+9. [Meta Strings (Check if two strings can become same after a swap in one string)](./Beginner/Q9/q9.md)
+   <!-- 10. [Find the longest substring with k unique characters in a given string](./Beginner/Q6/q6.md) -->
 
 INTERMEDIATE:
 
