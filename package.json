@@ -1,11 +1,11 @@
 {
   "name": "google-interview-questions",
   "version": "1.0.0",
-  "description": "",
+  "description": "Questions and my Answers to Google Interview",
   "main": "index.js",
   "scripts": {
     "start": "node index"
   },
-  "author": "",
+  "author": "fearless",
   "license": "ISC"
 }
