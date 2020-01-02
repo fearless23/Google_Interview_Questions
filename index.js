@@ -1,8 +1,10 @@
 const { performance } = require("perf_hooks");
 const { beginnerSols } = require("./Beginner/_beginner");
+const { intermediateSols } = require("./Intermediate/_intermediate");
 
 const qSols = {
-  b: beginnerSols
+  b: beginnerSols,
+  i: intermediateSols
 };
 
 const runSol = function(type = "b", quesNo = 1, solNo = 1, ...input) {
@@ -15,14 +17,18 @@ const runSol = function(type = "b", quesNo = 1, solNo = 1, ...input) {
   console.log(`Q:${quesNo} S:${solNo}`);
   console.log(`Time: ${b - a}ms`);
   console.log(`RAM Used: ${used} MB`);
-  console.log(`Result`);
-  console.log(r.result);
-  if (r.loopRun) {
-    console.log(`Loops: ${r.loopRun}, N: ${r.N}\n`);
+  if (r) {
+    if (r.result) {
+      console.log(`Result`);
+      console.log(r.result);
+    }
+    if (r.loopRun) {
+      console.log(`Loops: ${r.loopRun}, N: ${r.N}\n`);
+    }
   }
   //   return { time: b - a, result };
 };
 
 const arr = ["ale", "apple", "monkey", "plea"];
 const str = "abpcplea";
-runSol("b", 4, 2, arr, str, false);
+runSol("i", 1, 2);
