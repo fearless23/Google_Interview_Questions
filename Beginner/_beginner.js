@@ -7,6 +7,7 @@ const { q6Sols } = require("./Q6/q6");
 const { q7Sols } = require("./Q7/q7");
 const { q8Sols } = require("./Q8/q8");
 const { q9Sols } = require("./Q9/q9");
+const { q10Sols } = require("./Q10/q10");
 
 //
 exports.beginnerSols = Object.freeze({
@@ -18,5 +19,6 @@ exports.beginnerSols = Object.freeze({
   6: q6Sols,
   7: q7Sols,
   8: q8Sols,
-  9: q9Sols
+  9: q9Sols,
+  10: q10Sols
 });

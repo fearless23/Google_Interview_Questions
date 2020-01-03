@@ -16,7 +16,10 @@ const print = function(type, ...args) {
   console.log("\x1b[32m", ...args, "\x1b[0m");
 };
 
-exports.runSolution = function({ type, quesNo, solNo }, ...input) {
+exports.runSolution = function(
+  { type, quesNo, solNo, showResults, showLoops, showN },
+  ...input
+) {
   const fn = qSols[type][quesNo][solNo];
   const a = performance.now();
   const r = fn(...input);
@@ -28,14 +31,14 @@ exports.runSolution = function({ type, quesNo, solNo }, ...input) {
   print("", `Time: ${time}s`);
   print("", `RAM Used: ${used} MB`);
   if (r) {
-    if (r.result) {
+    if (r.result && showResults) {
       console.log("Result:");
       console.log(r.result);
     }
-    if (r.loopRun) {
+    if (r.loopRun && showLoops) {
       console.log(`Loops: ${r.loopRun}`);
     }
-    if (r.N) {
+    if (r.N && showN) {
       console.log(`N: ${r.N}\n`);
     }
   }

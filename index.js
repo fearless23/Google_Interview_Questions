@@ -1,6 +1,10 @@
 const { runSolution } = require("./_helpers");
-const opts = { type: "b", quesNo: 9, solNo: 1 };
-
-const str1 = "Conserve";
-const str2 = "Converse";
-runSolution(opts, str1, str2);
+const show = { showResults: false, showLoops: true, showN: false };
+const opts = solNo => ({ type: "b", quesNo: 10, solNo, ...show });
+//...........
+data = 101;
+//...........
+runSolution(opts(1), data);
+runSolution(opts(2), data);
+runSolution(opts(3), data);
+runSolution(opts(4), data);
