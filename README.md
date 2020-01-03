@@ -17,7 +17,8 @@ BEGINNER:
 7. [Find the two non-repeating elements in an array of repeating elements](./Beginner/Q7/q7.md)
 8. [Flood fill Algorithm – how to implement fill in paint?](./Beginner/Q8/q8.md)
 9. [Meta Strings (Check if two strings can become same after a swap in one string)](./Beginner/Q9/q9.md)
-   <!-- 10. [Find the longest substring with k unique characters in a given string](./Beginner/Q6/q6.md) -->
+10. [Print all Jumping Numbers smaller than or equal to a given value](./Beginner/Q10/q10.md)
+11. [Sum of all the numbers that are formed from root to leaf paths](./Beginner/Q11/q11.md)
 
 INTERMEDIATE:
 

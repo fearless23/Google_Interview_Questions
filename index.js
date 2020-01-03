@@ -1,10 +1,7 @@
 const { runSolution } = require("./_helpers");
-const show = { showResults: false, showLoops: true, showN: false };
-const opts = solNo => ({ type: "b", quesNo: 10, solNo, ...show });
-//...........
-data = 101;
-//...........
-runSolution(opts(1), data);
-runSolution(opts(2), data);
-runSolution(opts(3), data);
-runSolution(opts(4), data);
+const show = { showResults: true, showLoops: true, showN: false };
+const opts = solNo => ({ type: "b", quesNo: 11, solNo, ...show });
+
+const binaryTree = [null, 6, 3, 5, 2, 5, null, 4, null, null, 7, 4];
+runSolution(opts(1), binaryTree);
+runSolution(opts(2), binaryTree);
