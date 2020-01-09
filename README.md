@@ -23,3 +23,8 @@ BEGINNER:
 INTERMEDIATE:
 
 1. [Solve Sudoku | Backtracking-7](./Intermediate/Q1/q1.md)
+
+
+
+
+[![](https://codescene.io/projects/6486/status.svg) Get more details at **codescene.io**.](https://codescene.io/projects/6486/jobs/latest-successful/results)
